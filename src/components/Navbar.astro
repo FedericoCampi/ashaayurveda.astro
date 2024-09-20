@@ -1,0 +1,25 @@
+---
+interface Props {
+  titles: string[];
+}
+
+const { titles } = Astro.props;
+---
+
+<div class="flex w-full h-20 items-center border-b border-black">
+    <div class="w-[40%]">
+        Asha Ayurveda
+      </div>
+      <div class="w-[60%] space-x-5">
+        {titles.map((title) => (
+            <button class="btn">{title}</button>
+        ))}
+      </div>
+</div>
+  
+
+<style>
+  .btn {
+    @apply px-4 py-2 text-white bg-gray-800 rounded hover:bg-gray-600;
+  }
+</style>
